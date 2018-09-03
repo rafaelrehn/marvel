@@ -1,0 +1,16 @@
+<h1>Marvel Search</h1>
+
+<div>buscar por nome</div>
+<input type="text" [(ngModel)]="nameCharacter" name="name">
+<button (click)="getCharacters()">buscar</button>
+<div *ngIf="character">
+  <div>
+    nome: <strong>{{character.name}}</strong>
+  </div>
+  <div>
+    id: <strong>{{character.id}}</strong>
+  </div>
+  <div>
+    <img src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}" alt="{{character.name}}">
+  </div>
+</div>
